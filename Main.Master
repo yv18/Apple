@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="GroupProjectFinal.Main" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Mobile Store</title>
+     <link href="Content/bootstrap.css" rel="stylesheet" />
+     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Theme/BootStrapTheme.css" rel="stylesheet" />
+     <script src="Scripts/jquery-1.9.1.min.js"></script>
+     <script src="Scripts/bootstrap.min.js"></script>
+    <style> 
+        body {
+            background-color: #EEEEEE;
+
+        }
+
+        .img {
+            height: 350px;
+        }
+
+        footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-content ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Defualt.aspx">Mobile Store</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink1" NavigateUrl="~/Defualt.aspx" runat="server">Home</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink2" NavigateUrl="~/index.aspx" runat="server">Store</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink3" NavigateUrl="~/Cart.aspx" runat="server">Cart</asp:HyperLink>
+                            </li>
+
+                             <li class="nav-item">
+                                    <asp:HyperLink CssClass="nav-link" ID="HyperLink6" NavigateUrl="~/Orders.aspx" runat="server">Orders</asp:HyperLink>
+                             </li>
+ 
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink4" NavigateUrl="~/Login.aspx" runat="server">Login</asp:HyperLink>
+                            </li>
+                            <li class="nav-item">
+                                <asp:HyperLink CssClass="nav-link" ID="HyperLink5" NavigateUrl="~/Login.aspx" runat="server">LogOut</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <main>
+                <asp:ContentPlaceHolder ID="mainPlaceholder" runat="server"></asp:ContentPlaceHolder>
+            </main>
+        </div>
+
+
+
+    </form>
+</body>
+</html>
